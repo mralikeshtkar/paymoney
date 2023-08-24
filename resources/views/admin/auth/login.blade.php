@@ -19,21 +19,21 @@ $logo = settings('logo');
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/bootstrap/dist/css/bootstrap-css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/bootstrap/dist/css/bootstrap-css/bootstrap.min.css') }}">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/font-awesome/css/font-awesome.min.css')}}">
 
     <!-- Theme style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/AdminLTE.min.css') }}">
 
     <!-- iCheck -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/backend/iCheck/square/blue.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/dist/css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/iCheck/square/blue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/styles.css') }}">
 
     <!---favicon-->
     @if (!empty(settings('favicon')))
-        <link rel="shortcut icon" href="{{asset('public/images/logos/'.settings('favicon'))}}" />
+        <link rel="shortcut icon" href="{{asset('images/logos/'.settings('favicon'))}}" />
     @endif
 
 
