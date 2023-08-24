@@ -117,7 +117,7 @@
 												<div class="clearfix"></div>
 												<small class="form-text text-muted"><strong>{{ allowedImageDimension(100,80,'user') }}</strong></small>
 
-												<p style="width: 100px !important;"><img src='{{ url('public/uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview"></p>
+												<p style="width: 100px !important;"><img src='{{ url('uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview"></p>
 											</div>
 										</div>
 
@@ -128,7 +128,7 @@
 													<p class="py-2 text-active text-underline merchant-back-btn mt-2"><u><i class="fas fa-long-arrow-alt-left"></i> @lang('message.dashboard.button.back')</u></p>
 												</a>
 											</div>
-	
+
 											<div>
 												<button type="submit" class="btn btn-primary px-5 py-2" id="merchant_create">
 													<i class="spinner fa fa-spinner fa-spin" style="display: none;"></i> <span id="merchant_create_text">@lang('message.dashboard.button.submit')</span>
@@ -178,7 +178,7 @@
 	// preview currency logo on change
     $(document).on('change','#logo', function()
     {
-        let orginalSource = '{{ url('public/uploads/userPic/default-image.png') }}';
+        let orginalSource = '{{ url('uploads/userPic/default-image.png') }}';
         readFileOnChange(this, $('#merchant-demo-logo-preview'), orginalSource);
     });
 

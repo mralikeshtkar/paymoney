@@ -137,7 +137,7 @@
 								<div class="form-group row">
 									<label class="control-label col-sm-3 mt-11 text-sm-end fw-bold f-14" for="site_url">{{ __('Fee') }} (%)</label>
 									<div class="col-sm-6">
-										<input type="text" class="form-control f-14" name="fee" onkeypress="return isNumberOrDecimalPointKey(this, event);" 
+										<input type="text" class="form-control f-14" name="fee" onkeypress="return isNumberOrDecimalPointKey(this, event);"
 										value="{{ formatNumber((float)$merchant->fee, $merchant->currency_id) }}" id="fee"
 										oninput="restrictNumberToPrefdecimalOnInput(this)">
 										@if($errors->has('fee'))
@@ -171,7 +171,7 @@
 											</div>
 										@else
 											<div class="setting-img">
-												<img src='{{ url('public/uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview">
+												<img src='{{ url('uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview">
 											</div>
 										@endif
 									</div>
@@ -310,7 +310,7 @@
 	// preview logo on change
     $(document).on('change','#logo', function()
     {
-		let orginalSource = '{{ url('public/uploads/userPic/default-image.png') }}';
+		let orginalSource = '{{ url('uploads/userPic/default-image.png') }}';
 		let logo = $('#logo').attr('data-rel');
 		if (logo != '') {
 			readFileOnChange(this, $('#merchant-logo-preview'), orginalSource);

@@ -7,9 +7,9 @@
                 <div class="tab-content">
                     <div class="p-1 d-flex mt-3 flex-column justify-content-center">
                         @if (!empty($admin->picture) && file_exists(public_path('uploads/userPic/' . $admin->picture)))
-                            <img src='{{ url('public/uploads/userPic/', $admin->picture) }}' class="profile-user-img img-responsive img-circle h-100p" id="admin-picture-preview" alt="{{ __('Admin profile picture') }}">
+                            <img src='{{ url('userPic/', $admin->picture) }}' class="profile-user-img img-responsive img-circle h-100p" id="admin-picture-preview" alt="{{ __('Admin profile picture') }}">
                         @else
-                            <img src='{{ url("public/uploads/userPic/default-image.png") }}' class="profile-user-img img-responsive img-circle h-100p" alt="{{ __('Admin profile picture') }}">
+                            <img src='{{ url("userPic/default-image.png") }}' class="profile-user-img img-responsive img-circle h-100p" alt="{{ __('Admin profile picture') }}">
                         @endif
 
                         <h3 class="profile-username text-center">{{ $admin->first_name . ' ' . $admin->last_name }}</h3>

@@ -190,9 +190,9 @@
 											<?php
 											$adminAvatar = $result->admin->picture;
 											?>
-										<img src='{{url("public/uploads/userPic/$adminAvatar")}}' class="media-object w-60p">
+										<img src='{{url("uploads/userPic/$adminAvatar")}}' class="media-object w-60p">
 										@else
-											<img src="{{url('public/images/avatar.png')}}" class="media-object w-60p">
+											<img src="{{url('images/avatar.png')}}" class="media-object w-60p">
 										@endif
 									</div>
 

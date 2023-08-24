@@ -279,7 +279,7 @@ $('#edit-bank').validate({
         .done(function(response)
         {
             $('#edit_submit_btn').attr('disabled', false);
-            
+
             if (response.status == true) {
                 $('#editModal').modal('hide');
                 swal({title: titleText, text: response.message, type: "success"},
@@ -431,7 +431,7 @@ function getCpmId(bank_id,currency_id,paymentMethod)
 
                 $(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" data-bank-logo="${response.bank_logo}" data-file-id="${response.file_id}" src="${SITE_URL}/public/uploads/files/bank_logos/${response.bank_logo}" width="120" height="80"/><span class="remove_edit_bank_logo_preview"></span>`);
             } else {
-                $(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/public/uploads/userPic/default-image.png" width="120" height="80"/>`);
+                $(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/uploads/userPic/default-image.png" width="120" height="80"/>`);
             }
 
             $('#editModal').show();
@@ -468,7 +468,7 @@ $('.preview_edit_bank_logo').on('click', '.remove_edit_bank_logo_preview', funct
                     )
 
                     $(".preview_edit_bank_logo").html('');
-                    $(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/public/uploads/userPic/default-image.png" width="120" height="80"/>`);
+                    $(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/uploads/userPic/default-image.png" width="120" height="80"/>`);
                 } else {
                     swal(errorTitle, response.message);
                 }

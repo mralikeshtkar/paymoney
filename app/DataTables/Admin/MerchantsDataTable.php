@@ -24,9 +24,9 @@ class MerchantsDataTable extends DataTable
                 return isset($merchant->merchant_group) ? $merchant->merchant_group->name : '';
             })->editColumn('logo', function ($merchant) {
                 if (!empty($merchant->logo) && file_exists(public_path('user_dashboard/merchant/' . $merchant->logo))) {
-                    $logo = '<td><img src="' . url('public/user_dashboard/merchant/' . $merchant->logo) . '" width="100" height="80"></td>';
+                    $logo = '<td><img src="' . url('user_dashboard/merchant/' . $merchant->logo) . '" width="100" height="80"></td>';
                 } else {
-                    $logo = '<td><img src="' . url('public/uploads/userPic/default-image.png') . '" width="100" height="80"></td>';
+                    $logo = '<td><img src="' . url('uploads/userPic/default-image.png') . '" width="100" height="80"></td>';
                 }
                 return $logo;
             })

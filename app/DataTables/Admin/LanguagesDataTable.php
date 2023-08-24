@@ -39,7 +39,7 @@ class LanguagesDataTable extends DataTable
                 return getStatusLabel($language->status);
             })
             ->editColumn('flag', function ($language) {
-                return isset($language->flag) ? '<img src="' . url('public/uploads/languages-flags/' . $language->flag) . '" width="120" height="80">' : '<img src="' . url('public/uploads/userPic/default-image.png') . '" width="120" height="80">';
+                return isset($language->flag) ? '<img src="' . url('public/uploads/languages-flags/' . $language->flag) . '" width="120" height="80">' : '<img src="' . url('uploads/userPic/default-image.png') . '" width="120" height="80">';
             })
             ->rawColumns(['flag', 'status', 'action'])
             ->make(true);

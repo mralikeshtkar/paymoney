@@ -66,7 +66,7 @@
                   </div>
                 @else
                   <div class="setting-img">
-                    <img src='{{ url('public/uploads/userPic/default-image.png') }}' width="120" height="80" id="language-demo-flag-preview">
+                    <img src='{{ url('uploads/userPic/default-image.png') }}' width="120" height="80" id="language-demo-flag-preview">
                   </div>
                 @endif
               </div>
@@ -116,7 +116,7 @@
   // preview language logo on change
   $(document).on('change','#flag', function()
   {
-      let orginalSource = '{{ url('public/uploads/userPic/default-image.png') }}';
+      let orginalSource = '{{ url('uploads/userPic/default-image.png') }}';
       let flag = $('#flag').attr('data-rel');
       if (flag != '') {
         readFileOnChange(this, $('#language-flag-preview'), orginalSource);

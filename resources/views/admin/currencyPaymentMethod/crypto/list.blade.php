@@ -289,7 +289,7 @@
                                 );
                         } else {
                             $(".preview_edit_bank_logo").html(
-                                `<img class="thumb-bank-logo" src="${SITE_URL}/public/uploads/userPic/default-image.png" width="120" height="80"/>`
+                                `<img class="thumb-bank-logo" src="${SITE_URL}/uploads/userPic/default-image.png" width="120" height="80"/>`
                                 );
                         }
 

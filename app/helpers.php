@@ -1652,8 +1652,8 @@ if (!function_exists('logoPath')) {
     function logoPath()
     {
         return !empty(settings('logo')) && file_exists(public_path('images/logos/' . settings('logo')))
-            ? asset('public/images/logos/' . settings('logo'))
-            : asset('public/uploads/userPic/default-logo.jpg');
+            ? asset('images/logos/' . settings('logo'))
+            : asset('uploads/userPic/default-logo.jpg');
     }
 }
 
@@ -1669,7 +1669,7 @@ if (!function_exists('faviconPath')) {
     function faviconPath()
     {
         return !empty(settings('favicon')) && file_exists(public_path('images/logos/' . settings('favicon')))
-            ? asset('public/images/logos/' . settings('favicon'))
-            : asset('public/uploads/userPic/default-image.png');
+            ? asset('images/logos/' . settings('favicon'))
+            : asset('uploads/userPic/default-image.png');
     }
 }

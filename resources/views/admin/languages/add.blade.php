@@ -56,7 +56,7 @@
                 <div class="clearfix"></div>
                 <small class="form-text text-muted"><strong>{{ allowedImageDimension(120,80) }}</strong></small>
                 <div class="setting-img">
-                  <img src='{{ url('public/uploads/userPic/default-image.png') }}' width="120" height="80" id="language-flag-demo-preview">
+                  <img src='{{ url('uploads/userPic/default-image.png') }}' width="120" height="80" id="language-flag-demo-preview">
                 </div>
               </div>
             </div>
@@ -102,7 +102,7 @@
   // preview language flag on change
   $(document).on('change','#language-flag', function()
   {
-      let orginalSource = '{{ url('public/uploads/userPic/default-image.png') }}';
+      let orginalSource = '{{ url('uploads/userPic/default-image.png') }}';
       readFileOnChange(this, $('#language-flag-demo-preview'), orginalSource);
   });
 

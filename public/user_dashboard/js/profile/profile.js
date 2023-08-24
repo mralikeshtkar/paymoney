@@ -28,7 +28,7 @@ if ($('.main-content').find('#user-profile').length) {
             $("#qr-code-btn").removeClass('add-qr-code').addClass('update-qr-code').text(updateQrCodeText);
             $("#print-qr-code-btn").show();
         } else {
-            $(".user-profile-qr-code").html(`<img class="" src="${SITE_URL}/public/uploads/userPic/default-image.png" class="img-responsive"/>`);
+            $(".user-profile-qr-code").html(`<img class="" src="${SITE_URL}/uploads/userPic/default-image.png" class="img-responsive"/>`);
             $("#qr-code-btn").addClass('add-qr-code').text(addQrCodeText);
         }
     });
@@ -89,7 +89,7 @@ if ($('.main-content').find('#user-profile').length) {
         $("#qr-code-btn").removeClass('add-qr-code').addClass('update-qr-code').text(updateQrCodeText);
     });
 
- 
+
     //reload on close of phone add modal
     $('#add').on('hidden.bs.modal', function ()
     {
@@ -172,7 +172,7 @@ if ($('.main-content').find('#user-profile').length) {
             }
         });
     });
-    
+
     //Invalid Number Validation - add
     $(document).ready(function()
     {
@@ -441,7 +441,7 @@ if ($('.main-content').find('#user-profile').length) {
         if ($("#edit_phone").val() != '') {
             $("#edit_phone").val(`+${OrginalUsercarrierCode}${OrginalUserphone}`)
             //need to reload - or validation message still exists.
-            window.location.reload(); 
+            window.location.reload();
         }
     });
 

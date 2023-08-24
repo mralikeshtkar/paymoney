@@ -16,7 +16,7 @@
                             </a>
                         @else
                             <a class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">
-                                <img src="{{ url('public/uploads/userPic/default-logo.jpg') }}">
+                                <img src="{{ url('uploads/userPic/default-logo.jpg') }}">
                             </a>
                         @endif
 

@@ -138,7 +138,7 @@
                                                     @endforeach
                                                 </div>
                                             @else
-                                            
+
                                                 <div>
                                                     <div class="check-parent-div flex-for-column">
                                                         <p class="font-bold">{{ $module['name'] }}</p>
@@ -169,7 +169,7 @@
                                     <div class="clearfix"></div>
                                     <small class="form-text text-muted f-12"><strong>{{ allowedImageDimension(120,80) }}</strong></small>
                                     <div class="preview_bank_logo">
-                                        <img src="{{ url('public/uploads/userPic/default-image.png') }}" class="object-contain thumb-bank-logo" width="120" height="80" id="bank-demo-logo-preview"/>
+                                        <img src="{{ url('uploads/userPic/default-image.png') }}" class="object-contain thumb-bank-logo" width="120" height="80" id="bank-demo-logo-preview"/>
                                     </div>
                                 </div>
                             </div>

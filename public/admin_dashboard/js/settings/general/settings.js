@@ -23,7 +23,7 @@ function updateSideBarCompanySmallLogo(file)
         alert(JSON.parse(error.responseText).message);
         });
     } else {
-        $('.company-logo').attr('src', SITE_URL+'/public/uploads/userPic/default-logo.jpg');
+        $('.company-logo').attr('src', SITE_URL+'/uploads/userPic/default-logo.jpg');
     }
 }
 
@@ -43,7 +43,7 @@ $(window).on('load', function()
 // preview company logo on change
 $(document).on('change','#logo', function()
 {
-    let orginalSource = '{{ url("public/uploads/userPic/default-logo.jpg") }}';
+    let orginalSource = '{{ url("uploads/userPic/default-logo.jpg") }}';
     let logo = $('#logo').attr('data-rel');
 
     if (logo != '') {
@@ -74,7 +74,7 @@ $(document).on('change','#favicon', function()
 $(document).on('click','.remove_img_preview_site_logo', function()
 {
     let logo = $('#logo').attr('data-rel');
-    
+
     if(logo) {
         $.ajax({
         headers: {
@@ -90,8 +90,8 @@ $(document).on('click','.remove_img_preview_site_logo', function()
         {
             if (reply.success == 1) {
             swal({
-                title: "", 
-                text: reply.message, 
+                title: "",
+                text: reply.message,
                 type: "success"
             }, function(){
                 window.location.reload();
@@ -109,7 +109,7 @@ $(document).on('click','.remove_img_preview_site_logo', function()
 $(document).on('click','.remove_fav_preview', function()
 {
     let favicon = $('#favicon').attr('data-favicon');
-    
+
     if(favicon) {
     $.ajax({
         headers: {
@@ -125,8 +125,8 @@ $(document).on('click','.remove_fav_preview', function()
         {
         if (reply.success == 1) {
             swal({
-            title: "", 
-            text: reply.message, 
+            title: "",
+            text: reply.message,
             type: "success"
             }, function(){
             location.reload();

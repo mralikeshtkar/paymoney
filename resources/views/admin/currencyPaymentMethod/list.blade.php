@@ -99,7 +99,7 @@
 	<script src="{{ asset('public/backend/sweetalert/sweetalert.min.js')}}" type="text/javascript"></script>
 	<script>
 		'use strict';
-		var bankLogo = "{{ url('public/uploads/userPic/default-image.png') }}";
+		var bankLogo = "{{ url('uploads/userPic/default-image.png') }}";
 		var isActiveMobileMoney = "{!! config('mobilemoney.is_active') !!}";
 		var modeRequire = "{{ __('Please select a mode.') }}";
 		var updateText = "{{ __('Updating...') }}";
@@ -128,7 +128,7 @@
 		var errorMessage = '{{ __("Please select (:x) file.") }}';
 		var extensionsValidationMessage = errorMessage.replace(':x', extensionsValidation);
 	</script>
-	<script src="{{ asset('public/admin_dashboard/js/currency_payment_methods/list.min.js')}}" type="text/javascript"></script>
+	<script src="{{ asset('admin_dashboard/js/currency_payment_methods/list.min.js')}}" type="text/javascript"></script>
 	@if (config('mobilemoney.is_active') && $list_menu == 'mobilemoney')
 		<script>
 			'use strict';

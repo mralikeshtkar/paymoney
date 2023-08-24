@@ -724,7 +724,7 @@
 													<div class="clearfix"></div>
                       								<small class="form-text text-muted"><strong>{{ allowedImageDimension(120,80) }}</strong></small>
 													<div class="preview_bank_logo">
-														<img src="{{ url('public/uploads/userPic/default-image.png') }}" width="120" height="80" id="bank-demo-logo-preview"/>
+														<img src="{{ url('uploads/userPic/default-image.png') }}" width="120" height="80" id="bank-demo-logo-preview"/>
 													</div>
 												</div>
 											</div>
@@ -1119,7 +1119,7 @@
             $('#add-bank').find('.error').removeClass('error');
             $('#submit_btn').prop('disabled',false);
             $('#bank_logo').val('');
-            $('#bank-demo-logo-preview').attr({src: '{{ url('public/uploads/userPic/default-image.png') }}'});
+            $('#bank-demo-logo-preview').attr({src: '{{ url('uploads/userPic/default-image.png') }}'});
 	    });
 
 	    $('#editModal').on('hidden.bs.modal', function (e) {
@@ -1143,7 +1143,7 @@
 	        	// console.log(e);
 		        if (!input.files[0].name.match(/.(png|jpg|jpeg|gif|bmp|ico)$/i))
 		        {
-		        	$('#bank-demo-logo-preview').attr({src: '{{ url('public/uploads/userPic/default-image.png') }}'});
+		        	$('#bank-demo-logo-preview').attr({src: '{{ url('uploads/userPic/default-image.png') }}'});
 		        	$('#submit_btn').prop('disabled',true);
 				}
 				else
@@ -1219,7 +1219,7 @@
 	        {
 		        if (!input.files[0].name.match(/.(png|jpg|jpeg|gif|bmp|ico)$/i))
 		        {
-		        	$('.thumb-bank-logo').attr({src: '{{ url('public/uploads/userPic/default-image.png') }}'});
+		        	$('.thumb-bank-logo').attr({src: '{{ url('uploads/userPic/default-image.png') }}'});
 		        	$('.remove_edit_bank_logo_preview').remove();
 		        	$('#edit_submit_btn').prop('disabled',true);
 				}
@@ -1307,7 +1307,7 @@
 		         	$(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" data-bank-logo="${response.bank_logo}" data-file-id="${response.file_id}"
 		         	                                  src="${SITE_URL}/public/uploads/files/bank_logos/${response.bank_logo}" width="120" height="80"/><span class="remove_edit_bank_logo_preview"></span>`);
 		        } else {
-		        	$(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/public/uploads/userPic/default-image.png" width="120" height="80"/>`);
+		        	$(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/uploads/userPic/default-image.png" width="120" height="80"/>`);
 		        }
 
 		        $('#editModal').modal();
@@ -1345,7 +1345,7 @@
 					    )
 
 					    $(".preview_edit_bank_logo").html('');
-                		$(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/public/uploads/userPic/default-image.png" width="120" height="80"/>`);
+                		$(".preview_edit_bank_logo").html(`<img class="thumb-bank-logo" src="${SITE_URL}/uploads/userPic/default-image.png" width="120" height="80"/>`);
         			} else {
         				alert(response.message);
         				// location.reload();

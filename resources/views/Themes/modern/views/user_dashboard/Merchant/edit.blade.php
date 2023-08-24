@@ -126,9 +126,9 @@
 												<small class="form-text text-muted"><strong>{{ allowedImageDimension(100,80,'user') }}</strong></small>
 
 												@if (!empty($merchant->logo))
-													<p style="width: 100px !important;"><img src="{{url('public/user_dashboard/merchant/'.$merchant->logo)}}" width="100" height="80" id="merchant-logo-preview"></p>
+													<p style="width: 100px !important;"><img src="{{url('user_dashboard/merchant/'.$merchant->logo)}}" width="100" height="80" id="merchant-logo-preview"></p>
 												@else
-													<p style="width: 100px !important;"><img src='{{ url('public/uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview"></p>
+													<p style="width: 100px !important;"><img src='{{ url('uploads/userPic/default-image.png') }}' width="100" height="80" id="merchant-demo-logo-preview"></p>
 												@endif
 											</div>
 
@@ -141,7 +141,7 @@
 													<p class="py-2 text-active text-underline merchant-back-btn mt-2"><u><i class="fas fa-long-arrow-alt-left"></i> @lang('message.dashboard.button.back')</u></p>
 												</a>
 											</div>
-	
+
 											<div>
 												<button type="submit" class="btn btn-primary px-4 py-2" id="merchant_update">
 													<i class="spinner fa fa-spinner fa-spin" style="display: none;"></i> <span id="merchant_update_text">@lang('message.dashboard.button.update')</span>
@@ -193,7 +193,7 @@
 	// preview currency logo on change
 	$(document).on('change','#logo', function()
 	{
-	    let orginalSource = '{{ url('public/uploads/userPic/default-image.png') }}';
+	    let orginalSource = '{{ url('uploads/userPic/default-image.png') }}';
     	let merchantLogo = '{{ !empty($merchant->logo) ? $merchant->logo : null }}';
     	if (merchantLogo != null) {
     		readFileOnChange(this, $('#merchant-logo-preview'), orginalSource);

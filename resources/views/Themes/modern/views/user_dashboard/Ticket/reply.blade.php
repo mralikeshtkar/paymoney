@@ -198,9 +198,9 @@
                                         <div class="d-flex">
                                             <div class="pr-2">
                                                 @if(!empty($result->admin->picture) && file_exists(public_path('uploads/userPic/' . $result->admin->picture)))
-                                                    <img src="{{ url('public/uploads/userPic/' . $result->admin->picture) }}" class="rounded-circle" style="width:50px;">
+                                                    <img src="{{ url('uploads/userPic/' . $result->admin->picture) }}" class="rounded-circle" style="width:50px;">
                                                 @else
-                                                    <img src="{{ url('public/user_dashboard/images/avatar.jpg') }}" alt="Admin Image" class="rounded-circle" style="width:50px;">
+                                                    <img src="{{ url('user_dashboard/images/avatar.jpg') }}" alt="Admin Image" class="rounded-circle" style="width:50px;">
                                                 @endif
                                             </div>
 
