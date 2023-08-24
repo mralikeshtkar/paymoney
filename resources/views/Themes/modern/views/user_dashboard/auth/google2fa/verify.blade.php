@@ -77,12 +77,12 @@
 							<img src="{{ url('public/uploads/userPic/default-logo.jpg') }}" class="img-responsive" width="80" height="50">
 						</a>
 					@endif
-		
+
 					@if (request()->path() != 'merchant/payment')
 						<button aria-label="navbar" class="navbar-toggler bg-white text-28" data-toggle="modal" data-target="#left_modal">
 							<i class="fas fa-bars"></i>
 						</button>
-		
+
 						<div class="collapse navbar-collapse navbar-toggler-right" id="navbarSupportedContent">
 							<ul class="navbar-nav  my-navbar">
 								<li class="nav-item <?= isset( $menu ) && ( $menu == 'home' ) ? 'nav_active': '' ?>"><a href="{{url('/')}}" class="nav-link">@lang('message.home.title-bar.home')</a></li>
@@ -102,9 +102,9 @@
 								@endif
 							</ul>
 						</div>
-		
+
 					@endif
-		
+
 					<div id="quick-contact" class="collapse navbar-collapse">
 						<ul class="ml-auto">
 							@if( !Auth::check())
@@ -126,9 +126,9 @@
 					</div>
 				</div>
 			</nav>
-		
-		
-		
+
+
+
 			<!-- Modal Window -->
 			<div class="modal left fade" id="left_modal" tabindex="-1" role="dialog" aria-labelledby="left_modal">
 				<div class="modal-dialog" role="document">
@@ -143,9 +143,9 @@
 										@else
 											<img src="{{url('public/user_dashboard/images/avatar.jpg')}}" class="rounded-circle rounded-circle-custom" id="profileImageHeader">
 										@endif
-		
+
 									</div>
-		
+
 									<div>
 										@php
 											$fullName = strlen($user->first_name.' '.$user->last_name) > 20 ? substr($user->first_name.' '.$user->last_name,0,20)."..." : $user->first_name.' '.$user->last_name; //change in pm_v2.1
@@ -161,18 +161,18 @@
 									</a>
 									@else
 										<a class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">
-											<img src="{{ url('public/uploads/userPic/default-logo.jpg') }}" class="logo">
+											<img src="{{ url('uploads/userPic/default-logo.jpg') }}" class="logo">
 										</a>
 									@endif
-		
+
 								</div>
 							@endif
-		
+
 							<button type="button" class="close text-28" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
-		
+
 						<div class="modal-body">
 							<ul class="mobile-side">
 								<li><a href="{{url('/')}}">@lang('message.home.title-bar.home')</a></li>
@@ -303,7 +303,7 @@
 			</div>
 		</section>
 
-		
+
 		<section class="bg-image footer text-white mt-5">
 			<div class="bg-dark">
 				<div class="container pt-60 pb-3">
@@ -312,10 +312,10 @@
 							<div>
 								<img src="{{theme_asset('public/images/logos/'.$logo)}}" class="mw-200" alt="logo">
 							</div>
-		
+
 							<p class="mt-3">{{ __('Paymoney, a secured online payment gateway that allows payment in multiple currencies easily, safely and securely.') }}</p>
 						</div>
-		
+
 						<div class="col-xl-7 pt-3">
 							<div class="d-flex flex-wrap justify-content-between">
 								<div>
@@ -327,7 +327,7 @@
 										<li class="mt-2"><a href="{{ url('/developer') }}" class="text-white">@lang('message.home.title-bar.developer')</a></li>
 									</ul>
 								</div>
-		
+
 								<div>
 									<ul class="link mt-4 pt-1">
 										@if(!empty($menusFooter))
@@ -340,7 +340,7 @@
 							</div>
 						</div>
 					</div>
-		
+
 					<div class="d-flex flex-wrap justify-content-between">
 						<div>
 							<div class="d-flex justify-content-center">
@@ -355,10 +355,10 @@
 								</div>
 							</div>
 						</div>
-		
+
 						<div>
 							<div class="d-flex justify-content-center pt-4">
-		
+
 								@foreach(getAppStoreLinkFrontEnd() as $app)
 									@if (!empty($app->logo))
 										<div class="p-2 pl-4 pr-4">
@@ -373,7 +373,7 @@
 							</div>
 						</div>
 					</div>
-		
+
 					<hr class="mb-2">
 					<div class="d-flex justify-content-between">
 						<div>
@@ -382,13 +382,13 @@
 							?>
 							<p class="copyright mt-0">@lang('message.footer.copyright')&nbsp;© {{date('Y')}} &nbsp;&nbsp; {{ $company_name }} | @lang('message.footer.copyright-text')</p>
 						</div>
-		
+
 						<div>
 							<div class="container-select d-flex">
 								<div>
 									<i class="fa fa-globe"></i>
 								</div>
-		
+
 								<div>
 									<select class="select-custom mt-0" id="lang">
 										@foreach (getLanguagesListAtFooterFrontEnd() as $lang)
@@ -399,8 +399,8 @@
 							</div>
 						</div>
 					</div>
-		
-		
+
+
 				</div>
 			</div>
 		</section>
@@ -605,7 +605,7 @@
 
 
 
-		
+
 
 // custom dropdown
 
