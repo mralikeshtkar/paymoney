@@ -101,7 +101,8 @@ if (!function_exists('theme_asset')) {
         $themeInfo = Theme::getThemeInfo($currentTheme);
 
         if (file_exists(base_path('resources/views/Themes/' . $currentTheme . '/assets/' . $path))) {
-            return url('resources/views/Themes/' . $currentTheme . '/assets/' . $path);
+            return url( $currentTheme . '/assets/' . $path);
+//            return url('resources/views/Themes/' . $currentTheme . '/assets/' . $path);
         }
 
         if (!empty($themeInfo->get('parent')) && file_exists(base_path('resources/views/Themes/' . $themeInfo->get('parent') . '/assets/' . $path))) {
@@ -110,6 +111,6 @@ if (!function_exists('theme_asset')) {
 
         return url($path);
 
-       
+
     }
 }
