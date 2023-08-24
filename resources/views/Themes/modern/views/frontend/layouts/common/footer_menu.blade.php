@@ -10,11 +10,11 @@
 				<div class="col-md-5 pb-54 align-center">
                     @if(!empty(settings('logo')) && file_exists(public_path('images/logos/' . settings('logo'))))
                         <a class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">
-                            <img class="mt-54 footer-logo" src="{{ url('public/images/logos/'. settings('logo')) }}" alt="brand-logo">
+                            <img class="mt-54 footer-logo" src="{{ url('images/logos/'. settings('logo')) }}" alt="brand-logo">
                         </a>
                     @else
                         <a class="navbar-brand" href="@if (request()->path() != 'merchant/payment') {{ url('/') }} @else {{ '#' }} @endif">
-                            <img src="{{ url('public/uploads/userPic/default-logo.jpg') }}" class="mt-54 footer-logo object-contain">
+                            <img src="{{ url('uploads/userPic/default-logo.jpg') }}" class="mt-54 footer-logo object-contain">
                         </a>
                     @endif
 
