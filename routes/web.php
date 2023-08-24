@@ -19,7 +19,7 @@ Route::post('coinpayment/check', 'Users\DepositController@coinpaymentCheckStatus
 
 // user email check on registration
 Route::post('user-registration-check-email', 'Auth\RegisterController@checkUserRegistrationEmail');
-
+dd(Config::get('adminPrefix'));
 // Unauthenticated Admin
 Route::group(['prefix' => Config::get('adminPrefix'), 'namespace' => 'Admin', 'middleware' => ['no_auth:admin', 'locale', 'ip_middleware']], function ()
 {
